@@ -1,0 +1,125 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 5% 5% 40%;
+      grid-template-rows: 5% 5% 40%;
+  gap: .3rem;
+  padding: .3rem;
+  height: 100vh;
+  text-align: center;
+}
+
+.container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.container .cabezera {
+  grid-column: 1/-1;
+  background-color: #6e58ff;
+}
+
+.container .lateral {
+  grid-column: 1/-1;
+  background-color: #6e58ff;
+}
+
+.container .principal {
+  grid-column: 1/-1;
+  background-color: #ab93ff;
+}
+
+.container .content1, .container .content2, .container .content3 {
+  grid-column: 1/-1;
+  background-color: #ab93ff;
+}
+
+.container .piedepagina {
+  grid-column: 1/-1;
+  background-color: #6e58ff;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    -ms-grid-rows: 5% 30%;
+        grid-template-rows: 5% 30%;
+  }
+  .container .lateral {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 5;
+    grid-row: 2/7;
+  }
+  .container .principal {
+    grid-column: 2/-1;
+  }
+  .container .content1, .container .content2, .container .content3 {
+    grid-column: 2/-1;
+  }
+  .container .piedepagina {
+    grid-column: 2/-1;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .container {
+    -ms-grid-rows: 5% 40% 10%;
+        grid-template-rows: 5% 40% 10%;
+  }
+  .container .lateral {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 5;
+    grid-row: 2/7;
+  }
+  .container .principal {
+    grid-column: 2/-1;
+  }
+  .container .content1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3/6;
+  }
+  .container .content2 {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3/6;
+  }
+  .container .content3 {
+    -ms-grid-column: 4;
+    grid-column: 4/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3/6;
+  }
+  .container .footer {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+}
+/*# sourceMappingURL=style.css.map */
